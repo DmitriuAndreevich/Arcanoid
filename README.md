@@ -99,6 +99,8 @@ pppppppppp
 
 ### Building and Running
 
+Important: Before building, make sure to download and install the SFML 3.0 development libraries (both dynamic and static) for your operating system. These libraries are required for successful compilation and linking.
+
 ### Requirements
 - C++17 compiler (GCC, Clang, or MSVC)
 - SFML 3.0

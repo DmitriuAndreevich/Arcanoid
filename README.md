@@ -20,17 +20,17 @@ A classic clone of the arcade game Arkanoid, written in C++ using the SFML 3.0 l
 
 ## Project Structure
 src/
-├── ball.cpp # Ball logic
-├── block.cpp # Block logic
+├── ball.cpp              # Ball logic
+├── block.cpp             # Block logic
 ├── block_intersection.cpp # Block collision handling
-├── game.cpp # Main game logic
-├── levels_manager.cpp # Level management
-├── main.cpp # Entry point
-├── message_box.cpp # Message system
+├── game.cpp              # Main game logic
+├── levels_manager.cpp    # Level management
+├── main.cpp              # Entry point
+├── message_box.cpp       # Message system
 ├── paddle_intersection.cpp # Paddle collision handling
-├── puddle.cpp # Paddle logic
+├── puddle.cpp            # Paddle logic
 ├── resources_manager.cpp # Resource management
-├── score_board.cpp # Score system
+├── score_board.cpp       # Score system
 └── wall_intersection.cpp # Wall collision handling
 
 include/
@@ -47,18 +47,18 @@ include/
 └── wall_intersection.h
 
 resources/
-├── fonts/ # Fonts for text
-├── sounds/ # Sound effects
-│ ├── game-lost.wav # Game over sound
-│ ├── game-won.wav # Win game sound
-│ ├── next_level.wav # Level complete sound
-│ └── victory.wav # Victory sound
-├── textures/ # Graphic assets
-│ ├── background.png # Background image
-│ ├── karmatic_arcade.tif # Game logo
-│ ├── objects.png # Game object sprites
-│ └── splashscreen.png # Splash screen
-└── levels.txt # Level configuration
+├── fonts/                # Fonts for text
+├── sounds/               # Sound effects
+│   ├── game-lost.wav     # Game over sound
+│   ├── game-won.wav      # Win game sound
+│   ├── next_level.wav    # Level complete sound
+│   └── victory.wav       # Victory sound
+├── textures/             # Graphic assets
+│   ├── background.png    # Background image
+│   ├── karmatic_arcade.tif # Game logo
+│   ├── objects.png       # Game object sprites
+│   └── splashscreen.png  # Splash screen
+└── levels.txt            # Level configuration
 
 ## Level Configuration
 Levels are configured via the `resources/levels.txt` file (format: 10 columns × 16 rows):

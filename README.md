@@ -19,6 +19,7 @@ A classic clone of the arcade game Arkanoid, written in C++ using the SFML 3.0 l
 - **Quit game**: Escape
 
 ## Project Structure
+```plaintext
 src/
 ├── ball.cpp              # Ball logic
 ├── block.cpp             # Block logic
@@ -59,6 +60,7 @@ resources/
 │   ├── objects.png       # Game object sprites
 │   └── splashscreen.png  # Splash screen
 └── levels.txt            # Level configuration
+```
 
 ## Level Configuration
 Levels are configured via the `resources/levels.txt` file (format: 10 columns × 16 rows):

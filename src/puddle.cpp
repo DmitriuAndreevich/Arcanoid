@@ -1,8 +1,8 @@
-#include "include/puddle.h"
+#include "..\include\puddle.h"
 
 Paddle::Paddle(Resources_Manager& resources, const sf::Vector2f& field_limits)  {
 	body = sf::RectangleShape({ body_width,body_height });
-	texture = resources.getTexture("resources\\textures\\objects.png");
+	texture = resources.getTexture("..\\resources\\textures\\objects.png");
 	body.setTexture(&texture);
 	body.setTextureRect({ {184,112}, {96,24} });
 	body.setOrigin({ body_width / 2, body_height / 2 });

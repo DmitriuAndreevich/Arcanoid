@@ -1,4 +1,4 @@
-#include "include/score_board.h"
+#include "..\include\score_board.h"
 
 ScoreBoard::ScoreBoard(const sf::Font& font, float window_width, float window_height) : score_txt(font), high_score_txt(font) {
 	body.setSize({window_width, 80.0f});

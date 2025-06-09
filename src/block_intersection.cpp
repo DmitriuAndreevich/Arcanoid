@@ -1,4 +1,4 @@
-#include "include/block_intersection.h"
+#include "..\include\block_intersection.h"
 
 BlockIntersection::BlockIntersection(Ball& ball, std::vector<std::unique_ptr<Block>>& blocks) : 
 	ball(ball), blocks(blocks)

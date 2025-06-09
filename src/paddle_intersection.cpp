@@ -1,4 +1,4 @@
-#include "include/paddle_intersection.h"
+#include "..\include\paddle_intersection.h"
 
 PaddlleIntersection::PaddlleIntersection(Ball& ball, Paddle& paddle) : ball(ball), paddle(paddle) {
 

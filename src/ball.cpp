@@ -1,10 +1,10 @@
-#include "include/ball.h"
-#include "include/game.h"
-#include "include/puddle.h"
+#include "..\include\ball.h"
+#include "..\include\game.h"
+#include "..\include\puddle.h"
 #include <random>
 
 Ball::Ball(Resources_Manager& resources, float min_x, float max_x, float min_y, float max_y) : min_x(min_x) , max_x(max_x) , min_y(min_y), max_y(max_y) {
-	texture = resources.getTexture("resources\\textures\\objects.png");
+	texture = resources.getTexture("..\\resources\\textures\\objects.png");
 	body = sf::CircleShape(12.0f);
 	body.setTexture(&texture);
 	body.setTextureRect({ {0, 80} , {24,24} });

@@ -1,5 +1,5 @@
-#include "include/message_box.h"
-#include "include/game.h"
+#include "..\include\message_box.h"
+#include "..\include\game.h"
 
 MessageBox::MessageBox(const sf::Font& font) : text(font) {
 	text.setCharacterSize(48u);

@@ -1,11 +1,11 @@
-#include "include/levels_manager.h"
+#include "..\include\levels_manager.h"
 #include <fstream>
 #include <iostream>
 
 LevelsManager::LevelsManager(Resources_Manager& resources):
 	resources(resources)
 {
-	std::ifstream levelInput("resources\\levels.txt");
+	std::ifstream levelInput("..\\resources\\levels.txt");
 
 	if (!levelInput) {
 		std::cerr << "Cannot read 'resources\\levels.txt' data \n";
@@ -32,7 +32,7 @@ LevelsManager::LevelsManager(Resources_Manager& resources):
 void LevelsManager::loadLevel(unsigned int level_index) {
 	blocks.clear();
 	blocks.reserve(80);
-	/*  Ñîõäàíèå áëîêîâ  */
+	/*  Ã‘Ã®ÃµÃ¤Ã Ã­Ã¨Ã¥ Ã¡Ã«Ã®ÃªÃ®Ã¢  */
 	float pos_x{ Block::width / 2 };
 	float pos_y{ 2 * Block::height };
 

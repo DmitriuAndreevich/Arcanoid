@@ -1,5 +1,5 @@
-#include <SFML/Graphics.hpp>
-#include "include/game.h"
+#include <SFML/Graphics.hpp> //Enter your path to the library
+#include "..\include\game.h"
 
 int main()
 {

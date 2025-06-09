@@ -1,5 +1,5 @@
 #include <iostream>
-#include "include/resources_manager.h"
+#include "..\include\resources_manager.h"
 
 sf::Font& Resources_Manager::getFont(const std::string& path) {
 	const auto& pair_found = fonts.find(path);

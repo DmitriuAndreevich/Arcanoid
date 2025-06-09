@@ -1,8 +1,8 @@
-#include  "include/block.h"
+#include  "..\include\block.h"
 
 Block::Block(Resources_Manager& resources, BlockColor color, const sf::Vector2f init) {
 	body = sf::RectangleShape({ Block::width, Block::height });
-	texture = resources.getTexture("resources\\textures\\objects.png");
+	texture = resources.getTexture("..\\resources\\textures\\objects.png");
 	body.setOrigin({ Block::width / 2.0f, Block::height / 2 });
 	body.setPosition(init);
 	body.setTexture(&texture);

@@ -1,5 +1,5 @@
-#include "include/wall_intersection.h"
-#include "include/game.h"
+#include "..\include\wall_intersection.h"
+#include "..\include\game.h"
 
 
 WalItersection::WalItersection(Ball& ball, Game& game) : ball(ball), game(game) {

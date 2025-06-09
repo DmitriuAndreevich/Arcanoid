@@ -21,6 +21,7 @@ A classic clone of the arcade game Arkanoid, written in C++ using the SFML 3.0 l
 ## Project Structure
 ```plaintext
 src/
+├── main.cpp 
 ├── ball.cpp              # Ball logic
 ├── block.cpp             # Block logic
 ├── block_intersection.cpp # Block collision handling
@@ -49,6 +50,7 @@ include/
 
 resources/
 ├── fonts/                # Fonts for text
+│   ├── karmatic_arcade.tif
 ├── sounds/               # Sound effects
 │   ├── game-lost.wav     # Game over sound
 │   ├── game-won.wav      # Win game sound
@@ -56,7 +58,6 @@ resources/
 │   └── victory.wav       # Victory sound
 ├── textures/             # Graphic assets
 │   ├── background.png    # Background image
-│   ├── karmatic_arcade.tif # Game logo
 │   ├── objects.png       # Game object sprites
 │   └── splashscreen.png  # Splash screen
 └── levels.txt            # Level configuration

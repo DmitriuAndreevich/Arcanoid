@@ -20,13 +20,13 @@ Game::Game() : game_state(GameState::IN_PROGRESS), window_bg(window_background_t
 
 void Game::setup() {
 
-	font = resources.getFont("resources\\fonts\\karmatic_arcade.ttf");
-	window_background_texture = resources.getTexture("resources\\textures\\background.png");
+	font = resources.getFont("..\\resources\\fonts\\karmatic_arcade.ttf");
+	window_background_texture = resources.getTexture("..\\resources\\textures\\background.png");
 	window_background_texture.setRepeated(true);
 
-	game_over_sound_buffer = resources.getSound("resources\\sounds\\game-lost.wav");
-	game_won_sound_buffer = resources.getSound("resources\\sounds\\game-won.wav"); //   victory.wav
-	game_next_level_sound_buffer = resources.getSound("resources\\sounds\\next_level.wav");
+	game_over_sound_buffer = resources.getSound("..\\resources\\sounds\\game-lost.wav");
+	game_won_sound_buffer = resources.getSound("..\\resources\\sounds\\game-won.wav"); //   victory.wav
+	game_next_level_sound_buffer = resources.getSound("..\\resources\\sounds\\next_level.wav");
 
 	game_over_sound.setBuffer(game_over_sound_buffer);
 	game_won_sound.setBuffer(game_won_sound_buffer);
@@ -43,7 +43,7 @@ void Game::setup() {
 
 void Game::show_splash_screen() {
 	sf::Texture splash_screen_texture;
-	if (!splash_screen_texture.loadFromFile("resources\\textures\\splashscreen.png") ) {
+	if (!splash_screen_texture.loadFromFile("..\\resources\\textures\\splashscreen.png") ) {
 		std::cerr << "ERROR: Unable to load texture\n";
 		exit(1);
 	}

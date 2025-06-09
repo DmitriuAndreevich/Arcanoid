@@ -1,4 +1,4 @@
-#include "include/game.h"
+#include "..\include\game.h"
 #include <iostream>
 
 Game::Game() : game_state(GameState::IN_PROGRESS), window_bg(window_background_texture), ball(resources,20.0f,460.0f, 360.0f,500.0f)
@@ -14,7 +14,7 @@ Game::Game() : game_state(GameState::IN_PROGRESS), window_bg(window_background_t
 
 
 
-	//œŒƒ√–”∆¿“‹ »« ‘¿…À¿ HIGH_SCORE
+	//√è√é√Ñ√É√ê√ì√Ü√Ä√í√ú √à√á √î√Ä√â√ã√Ä HIGH_SCORE
 
 }
 
@@ -98,7 +98,7 @@ void Game::draw() {
 
 void Game::level_completed() {
 
-	//”¬≈À»◊»“‹ — Œ–Œ—“‹ ÿ¿–» ¿
+	//√ì√Ç√Ö√ã√à√ó√à√í√ú √ë√ä√é√ê√é√ë√í√ú √ò√Ä√ê√à√ä√Ä
 
 
 	if (level + 1 < levels_manager.levelAmount()) {
@@ -121,8 +121,8 @@ void Game::level_completed() {
 			game_sound_played = true;
 		}
 
-		//œ‡Á‰ÌË˜Ì‡ˇ ÏÛÁ˚Í‡
-		//Õ‡ËÒÓ‚‡Ú¸ ÓÍÌÓ Ò ‚˚Ë„˚¯ÂÏ
+		//√è√∞√†√ß√§√≠√®√∑√≠√†√ø √¨√≥√ß√ª√™√†
+		//√ç√†√∞√®√±√Æ√¢√†√≤√º √Æ√™√≠√Æ √± √¢√ª√®√£√∞√ª√∏√•√¨
 		winLoseFreeze();
 	}
 }
@@ -135,7 +135,7 @@ void Game::gameLost() {
 		game_sound_played = true;
 	}
 
-	//Œ·ÌÓ‚ËÚ¸Ú‡·ÎËˆÛ ÎË‰Â‡ highScore
+	//√é√°√≠√Æ√¢√®√≤√º√≤√†√°√´√®√∂√≥ √´√®√§√•√∞√† highScore
 	messageBox.setString("GAME OVER");
 	winLoseFreeze();
 }
@@ -174,5 +174,5 @@ void Game::levelCompletedFreeze() {
 	}
 }
 
-//«¿√–”∆¿“‹ ¬ ‘¿…À HIGH_SCORE
-//—ƒ≈À¿“‹ «¬”  —“ŒÀ ÕŒ¬≈“»ﬂ ÿ¿–» ¿ »  »–œ»◊» ¿
+//√á√Ä√É√ê√ì√Ü√Ä√í√ú √Ç √î√Ä√â√ã HIGH_SCORE
+//√ë√Ñ√Ö√ã√Ä√í√ú √á√Ç√ì√ä √ë√í√é√ã√ä√ç√é√Ç√Ö√í√à√ü √ò√Ä√ê√à√ä√Ä √à √ä√à√ê√è√à√ó√à√ä√Ä

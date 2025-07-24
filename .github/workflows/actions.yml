@@ -1,0 +1,78 @@
+name: GitHub Classroom Workflow
+
+on:
+  workflow_dispatch:
+  push:
+    paths_ignore:
+      - '.github/*'
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  Checking-Solution:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Get repository code
+        uses: actions/checkout@v4
+
+      - name: Install Build Tools and Dependencies
+        run: |
+          # Install CMake
+          sudo apt-get update
+          sudo apt-get install cmake -y
+
+          # Install g++ and valgrind
+          sudo apt-get install valgrind g++-11 gcc-11 -y
+          sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 110
+          sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 110
+
+          # Verify versions
+          cmake --version
+          g++ --version
+          gcc --version
+
+      - name: Build Project
+        run: |
+          # Create build directory and navigate into it
+          mkdir build
+          cd build
+
+          # Configure the project using CMake
+          cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=g++
+
+          # Build the project
+          cmake --build .
+
+          # Check build success
+          if [ $? -ne 0 ]; then
+            echo "Build failed!"
+            exit 1
+          fi
+
+      - name: Memory leaks
+        run: |
+          # Navigate to the build directory
+          cd build
+
+          # Run valgrind on the test executable
+          valgrind --tool=memcheck --leak-check=full --undef-value-errors=no --error-exitcode=111 ./run_tests
+
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: CPD
+        uses: amcp-pit/cpd-action@v1
+        id: cpd
+        with:
+          repository: ${{ github.repository }}
+          collection: ${{ github.repository_owner }}
+
+      - name: Clean
+        run: |
+          # Clean build artifacts
+          if [ -d "build" ]; then rm -rf build; fi
+          rm -rf ./* || true
+          rm -rf ./.??* || true
